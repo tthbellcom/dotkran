@@ -61,9 +61,6 @@ RUN echo xdebug.remote_enable=1 >> /etc/php5/conf.d/20-xdebug.ini;\
 ADD ./adds/id_rsa.pub /root/.ssh/authorized_keys
 RUN chown root:root /root/.ssh/authorized_keys
 
-# SSMTP to mailcatcher
-RUN sed -i -e 's/mailhub=mail/mailhub=172.17.42.1:1025/' /etc/ssmtp/ssmtp.conf
-
 ADD ./adds/install_db.sh /opt/install_db.sh
 ADD ./adds/start_supervisor_log.sh /opt/start_supervisor_log.sh
 
