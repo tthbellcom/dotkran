@@ -40,10 +40,6 @@ RUN echo "ServerName localdev" | tee /etc/apache2/conf.d/fqdn
 RUN a2enmod rewrite;\
   a2enmod php5
 
-# Site configuration
-ADD ./adds/000-default /etc/apache2/sites-enabled/000-default
-
-
 # Drush for Drupal
 RUN pear upgrade PEAR;\
   pear channel-discover pear.drush.org;\
