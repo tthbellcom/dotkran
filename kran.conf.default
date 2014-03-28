@@ -13,12 +13,11 @@
 #
 # Generic linux configuration:
 #
-# LOCAL_SITES=$HOME/sites/
+# LOCAL_SITES=$HOME/kran/sites/
 # SITES=$LOCAL_SITES
 #
 # Generic Mac OS configuration:
 #
-# LOCAL_SITES=$HOME/vagrant/sites
+# LOCAL_SITES=$HOME/kran/sites
 # SITES=/vagrant/sites
-LOCAL_SITES=$HOME/sites/
-SITES=$LOCAL_SITES
+
