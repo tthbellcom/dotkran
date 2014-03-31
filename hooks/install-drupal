@@ -1,0 +1,4 @@
+MSG Download and install drupal
+
+SSH cd /var/www && rm -r public_html && drush dl drupal --drupal-project-rename=public_html
+SSH cd /var/www/public_html && drush -y site-install standard --db-url=mysql://db:db@localhost/db --site-name=$1 
