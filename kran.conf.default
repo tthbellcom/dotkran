@@ -21,5 +21,8 @@
 #
 # Generic Mac OS configuration:
 #
-# LOCAL_SITES=$HOME/kran/sites
-# SITES=/vagrant/sites
+# LOCAL_SITES=$HOME/kran/sites/
+# SITES=/vagrant/sites/
+
+# Standard docker image
+#IMAGE=kran/wheezy

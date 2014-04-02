@@ -1,3 +1,4 @@
-wheezy/adds/id_rsa.pub
+*id_rsa.pub
+*.swp
 port.conf
 kran.conf

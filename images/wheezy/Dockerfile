@@ -62,6 +62,6 @@ ADD ./adds/id_rsa.pub /root/.ssh/authorized_keys
 RUN chown root:root /root/.ssh/authorized_keys
 
 ADD ./adds/install_db.sh /opt/install_db.sh
-ADD ./adds/start_supervisor_log.sh /opt/start_supervisor_log.sh
+ADD ./adds/start.sh /opt/start.sh
 
 EXPOSE 80 22
