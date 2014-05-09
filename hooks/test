@@ -1,1 +1,0 @@
-RUN /home/tth/.kran/hooks/helpers/fetch_db $1 $2
