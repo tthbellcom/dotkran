@@ -1,0 +1,10 @@
+MSG This will clone $2 from $1
+MSG rsync'ing files and folders, this will take some time.
+RUN rsync -ra man#$1:/var/www/$2/public_html/ public_html/
+
+MSG fetch database backup
+RUN /home/tth/.kran/hooks/helpers/fetch_db $1 $2
+
+MSG restore database
+ADD ./helpers/restore_db /opt/restore_db
+SSH /opt/restore_db

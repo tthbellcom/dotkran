@@ -1,0 +1,9 @@
+#!/bin/bash
+cd /var/www/public_html
+
+#!/bin/bash
+FILES=/var/www/tmp/db/*
+for f in $FILES
+do
+  gunzip -c $f | drush sql-cli
+done

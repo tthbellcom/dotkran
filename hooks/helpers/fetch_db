@@ -1,0 +1,4 @@
+#!/bin/bash
+SITE_NAME=${2/./_}
+mkdir -p ./tmp/db/
+scp man#$1:/var/lib/mysql_backup/$SITE_NAME* ./tmp/db/

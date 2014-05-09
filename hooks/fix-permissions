@@ -1,0 +1,2 @@
+ADD ./helpers/fix-www-permissions.sh /opt/fix-www-permissions.sh
+SSH cd /var/www; /opt/fix-www-permissions.sh

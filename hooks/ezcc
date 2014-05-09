@@ -1,0 +1,1 @@
+SSH cd /var/www/public_html/var; rm -r cache plain_site/cache

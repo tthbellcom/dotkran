@@ -1,0 +1,1 @@
+SSH tail -f /var/www/logs/php.log
