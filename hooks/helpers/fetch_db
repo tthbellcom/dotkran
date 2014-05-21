@@ -1,4 +1,4 @@
 #!/bin/bash
 SITE_NAME=${2/./_}
-mkdir -p ./tmp/db/
-scp man#$1:/var/lib/mysql_backup/$SITE_NAME* ./tmp/db/
+mkdir -p ./$2/www/tmp/db/
+scp $1:/var/lib/mysql_backup/$SITE_NAME* ./$2/www/tmp/db/

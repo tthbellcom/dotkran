@@ -1,10 +1,29 @@
+#
+# clone-site hook for krog
+#
 MSG This will clone $2 from $1
+MSG Initialize a site
+RUN kran init-site $2; true
+MSG
+
 MSG rsync'ing files and folders, this will take some time.
-RUN rsync -ra man#$1:/var/www/$2/public_html/ public_html/
+RUN rsync -aHAXvx --exclude="tmp/*" --exclude="logs/*" --numeric-ids --delete --progress -e "ssh -T -c arcfour -o Compression=no -x" $1:/var/www/$2/ $2/www > /dev/null
+MSG
 
 MSG fetch database backup
-RUN /home/tth/.kran/hooks/helpers/fetch_db $1 $2
+RUN ~/.kran/hooks/helpers/fetch_db $1 $2
+MSG
+
+MSG Set site
+STE $2
+
+MSG Start container
+RUN kran up $2
+MSG Wait until its up
+RUN sleep 10
+MSG
 
 MSG restore database
 ADD ./helpers/restore_db /opt/restore_db
 SSH /opt/restore_db
+MSG

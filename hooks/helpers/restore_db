@@ -1,7 +1,9 @@
 #!/bin/bash
+source /var/www/site
+
+mysql -e "CREATE DATABASE $DBNAME; GRANT ALL ON $DBNAME.* TO '$DBUSERNAME'@'localhost' IDENTIFIED BY '$DBPASS';"
 cd /var/www/public_html
 
-#!/bin/bash
 FILES=/var/www/tmp/db/*
 for f in $FILES
 do
