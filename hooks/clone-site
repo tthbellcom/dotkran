@@ -7,7 +7,8 @@ RUN kran init-site $2; true
 MSG
 
 MSG rsync'ing files and folders, this will take some time.
-RUN rsync -aHAXvx --exclude="tmp/*" --exclude="logs/*" --numeric-ids --delete --progress -e "ssh -T -c arcfour -o Compression=no -x" $1:/var/www/$2/ $2/www > /dev/null
+# RUN ssh $1 'du -hc /var/www/$2 --exclude="*.jpg" --exclude="*.pdf" | grep total'
+RUN rsync -ax --progress --exclude="*.jpg" --exclude="*.pdf" --exclude="tmp/*" --exclude="logs/*" --numeric-ids --delete --progress -e "ssh -T -c arcfour -o Compression=no -x" $1:/var/www/$2/ $2/www
 MSG
 
 MSG fetch database backup
