@@ -16,6 +16,7 @@ sleep 5
 echo ""
 echo "==> Create db"
 mysql -e "CREATE DATABASE db; GRANT ALL ON db.* TO 'db'@'localhost' IDENTIFIED BY 'db';"
+mysqladmin -u root password "database"
 
 echo ""
 echo "Initialized site. Created db:"

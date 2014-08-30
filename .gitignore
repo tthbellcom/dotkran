@@ -2,3 +2,4 @@
 *.swp
 port.conf
 kran.conf
+.kran_proxy

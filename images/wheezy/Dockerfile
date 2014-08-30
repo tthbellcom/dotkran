@@ -64,4 +64,7 @@ RUN chown root:root /root/.ssh/authorized_keys
 ADD ./adds/install_db.sh /opt/install_db.sh
 ADD ./adds/start.sh /opt/start.sh
 
+ADD ./adds/my.cnf /root/.my.cnf
+ADD ./adds/config.inc.php /etc/phpmyadmin/config.inc.php
+
 EXPOSE 80 22
