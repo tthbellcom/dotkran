@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "running install_db.sh"
 touch /var/www/logs/php.log
 touch /var/www/logs/error.log
 touch /var/www/logs/access.log
